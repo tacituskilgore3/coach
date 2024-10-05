@@ -1,0 +1,40 @@
+WEEK 3
+1.public class Main {
+    public static void main(String[] args) {
+        findTwoDigitNumbers();
+    }
+
+    public static void findTwoDigitNumbers() {
+        for (int num1 = 10; num1 <= 99; num1++) {  // First two-digit number
+            for (int num2 = 10; num2 <= 99; num2++) {  // Second two-digit number
+                // Form a four-digit number by concatenating num1 and num2
+                int fourDigitNumber = Integer.parseInt("" + num1 + num2);
+                
+                // Calculate the product of the two numbers
+                int product = num1 * num2;
+                
+                // Check if the four-digit number is divisible by the product
+                if (fourDigitNumber % product == 0) {
+                    System.out.println("Numbers: " + num1 + " and " + num2);
+                }
+            }
+        }
+    }
+}
+
+2.public class Main {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        int number = 3;
+        System.out.println(containsNumber(array, number));  // Output: true
+    }
+
+    public static boolean containsNumber(int[] array, int number) {
+        for (int element : array) {
+            if (element == number) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
